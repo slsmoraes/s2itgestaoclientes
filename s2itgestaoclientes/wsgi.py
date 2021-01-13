@@ -1,5 +1,5 @@
 """
-WSGI config for s2itGestaoClientes project.
+WSGI config for s2itgestaoclientes project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -10,7 +10,8 @@ https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/
 import os
 
 from django.core.wsgi import get_wsgi_application
+from dj_static import Cling
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 's2itGestaoClientes.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 's2itgestaoclientes.settings')
 
-application = get_wsgi_application()
+application = Cling(get_wsgi_application())
